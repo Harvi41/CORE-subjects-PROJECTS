@@ -107,9 +107,8 @@ Total IPs Assigned: 1
 
 👩‍💻 AUTHOR
 ------------
-Project by: [Your Name]
+Project by: Pari Patel
 Language: C++
 Version: 1.0
-Date: [Insert Date]
 
 ========================================
