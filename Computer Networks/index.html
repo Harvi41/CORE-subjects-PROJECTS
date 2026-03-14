@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN Simulation - Content Delivery Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Content Delivery Network (CDN) Simulation</h1>
+            <p>Visualize how CDN reduces latency by serving content from the nearest server</p>
+        </header>
+
+        <div class="main-content">
+            <div class="control-panel">
+                <h2>Control Panel</h2>
+                <div class="user-location">
+                    <label for="userSelect">Select User Location:</label>
+                    <select id="userSelect">
+                        <option value="us">United States (New York)</option>
+                        <option value="eu">Europe (London)</option>
+                        <option value="asia">Asia (Singapore)</option>
+                        <option value="au">Australia (Sydney)</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <button id="withoutCDN" class="btn btn-primary">Request Without CDN</button>
+                    <button id="withCDN" class="btn btn-success">Request With CDN</button>
+                    <button id="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <div class="visualization">
+                <div class="map-container">
+                    <svg id="worldMap" viewBox="0 0 800 400">
+                        <!-- Origin Server -->
+                        <circle cx="400" cy="200" r="30" class="origin-server" id="originServer"/>
+                        <text x="400" y="250" text-anchor="middle" class="label">Origin Server (US Central)</text>
+                        
+                        <!-- Edge Servers (Between Origin and User) -->
+                        <circle cx="300" cy="175" r="15" class="edge-server" id="edgeUS"/>
+                        <text x="300" y="155" text-anchor="middle" class="label small">Edge Server 1</text>
+                        
+                        <circle cx="375" cy="150" r="15" class="edge-server" id="edgeEU"/>
+                        <text x="375" y="130" text-anchor="middle" class="label small">Edge Server 2</text>
+                        
+                        <circle cx="500" cy="190" r="15" class="edge-server" id="edgeAsia"/>
+                        <text x="500" y="170" text-anchor="middle" class="label small">Edge Server 3</text>
+                        
+                        <circle cx="550" cy="250" r="15" class="edge-server" id="edgeAU"/>
+                        <text x="550" y="270" text-anchor="middle" class="label small">Edge Server 4</text>
+                        
+                        <!-- CDN Servers (Closest to Users) -->
+                        <circle cx="200" cy="150" r="20" class="cdn-server" id="cdnUS"/>
+                        <text x="200" y="130" text-anchor="middle" class="label small">CDN - New York</text>
+                        
+                        <circle cx="350" cy="100" r="20" class="cdn-server" id="cdnEU"/>
+                        <text x="350" y="80" text-anchor="middle" class="label small">CDN - London</text>
+                        
+                        <circle cx="600" cy="180" r="20" class="cdn-server" id="cdnAsia"/>
+                        <text x="600" y="160" text-anchor="middle" class="label small">CDN - Singapore</text>
+                        
+                        <circle cx="650" cy="300" r="20" class="cdn-server" id="cdnAU"/>
+                        <text x="650" y="330" text-anchor="middle" class="label small">CDN - Sydney</text>
+                        
+                        <!-- User -->
+                        <circle cx="200" cy="150" r="15" class="user" id="user"/>
+                        <text x="200" y="190" text-anchor="middle" class="label user-label" id="userLabel">You</text>
+                        
+                        <!-- Connection lines (hidden by default) -->
+                        <line id="connectionLine1" class="connection-line" style="display:none"/>
+                        <line id="connectionLine2" class="connection-line" style="display:none"/>
+                        <circle id="dataPacket" r="8" class="data-packet" style="display:none"/>
+                    </svg>
+                </div>
+
+                <div class="stats-panel">
+                    <h3>Request Statistics</h3>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Distance:</span>
+                            <span class="stat-value" id="distance">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Latency:</span>
+                            <span class="stat-value" id="latency">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Server Route:</span>
+                            <span class="stat-value" id="server">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Status:</span>
+                            <span class="stat-value" id="status">Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>How CDN Works</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Without CDN</h3>
+                        <p>Requests go through multiple edge servers to reach the origin server, resulting in high latency due to longer network path.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>With CDN</h3>
+                        <p>Content is cached on nearby CDN servers. Requests are served directly from the closest CDN node without reaching the origin.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Benefits</h3>
+                        <p>Reduced latency (60-80% faster), lower bandwidth costs, improved availability, and significantly better user experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

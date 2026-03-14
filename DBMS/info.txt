@@ -1,0 +1,67 @@
+Project Title: Space Station Resource Monitoring System
+--------------------------------------------------------
+
+Description:
+-------------
+This project is a MySQL-based database management system designed to efficiently monitor and manage 
+the essential resources, supplies, crew activities, and system operations of a space station. 
+It ensures automated updates, safety alerts, and accurate tracking of all critical operations.
+
+Main Features:
+---------------
+1. Tracks available resources like Water, Oxygen, Fuel, and Food in different storage units.
+2. Monitors resource consumption by crew members.
+3. Maintains medical supply stock and expiry details.
+4. Logs maintenance tasks assigned to crew members.
+5. Tracks upcoming resupply deliveries for resources.
+6. Records important system logs such as Life Support, Power, and Communication statuses.
+7. Implements automation using SQL Triggers, Functions, and Cursors.
+
+Database Objects Used:
+-----------------------
+- Tables:
+  StorageUnit, Resource, ResourceLevel, CrewMember, RoleInfo, 
+  ConsumptionLog, ResupplySchedule, MaintenanceTask, 
+  MedicalSupply, MedicalLog, SystemLog
+
+- Triggers:
+  1. trg_after_consumption → Reduces resource level after consumption.
+  2. trg_after_resupply_delivery → Increases resource level when resupply is delivered.
+
+- Cursors:
+  1. Check_Resource_Levels() → Logs alerts for resources below minimum threshold.
+  2. Check_Expired_Medical_Supplies() → Logs alerts for expired medical items.
+
+- Functions:
+  1. GetResourceStatus(resID) → Returns LOW / NORMAL / FULL based on thresholds.
+  2. CheckMedicalExpiry(medID) → Returns 'Expired' or 'Valid' based on expiry date.
+
+SQL Concepts Covered:
+----------------------
+- DDL: CREATE, ALTER, DROP
+- DML: INSERT, UPDATE, DELETE
+- DQL: SELECT with JOINs, GROUP BY, ORDER BY
+- Constraints: PRIMARY KEY, FOREIGN KEY, ON DELETE/UPDATE actions
+- Views, Functions, Triggers, Procedures, Cursors
+- Automation and Integrity Enforcement
+
+Sample Queries:
+----------------
+1. List all active crew members with their assigned modules.
+2. Find resources below their minimum threshold.
+3. Show total resource consumption by each crew member.
+4. List all pending maintenance tasks.
+5. Display expired medical supplies.
+
+Usage:
+-------
+Run the SQL file in MySQL Workbench or any compatible database tool.
+Make sure to enable event_scheduler for automated tasks if required.
+
+Author:
+--------
+Pari Patel
+
+License:
+---------
+This project is created for academic and learning purposes.
