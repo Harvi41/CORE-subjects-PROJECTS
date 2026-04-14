@@ -1,0 +1,3 @@
+As my semester project for the Computer Organization and Architecture .. I have made  Automated street light system .. which uses 8085 Microprocessor as brain .. 
+1. Schematic diagram is uploaded
+2. explanation page is uploaded
