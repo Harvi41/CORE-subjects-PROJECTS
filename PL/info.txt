@@ -1,0 +1,5 @@
+This Project is about the openGL library of c++.. I have  made simple Traffic light simulator .
+Concept used in this is :
+1. OOP
+2. STL
+3. OpenGL
