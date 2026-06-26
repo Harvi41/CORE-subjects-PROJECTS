@@ -1,10 +1,8 @@
 # 📚 CORE Subjects Projects
 
-> A collaborative collection of academic lab assignments and projects covering core Computer Engineering subjects at **Birla Vishwakarma Mahavidyalaya (BVM), Anand, Gujarat.**
+> A collection of academic lab assignments and projects covering core Computer Engineering subjects at **Birla Vishwakarma Mahavidyalaya (BVM), Anand, Gujarat.**
 
-**👥 Contributors:**
-- [Harvi Gothi](https://github.com/Harvi41) — Computer Engineering, BVM (2024–2028)
-- [Pari Patel](https://github.com/Pari658) — Computer Engineering, BVM (2024–2028)
+**👤 Author:** [Harvi Gothi](https://github.com/Harvi41) — Computer Engineering, BVM (2024–2028)
 
 ---
 
@@ -115,15 +113,14 @@ python filename.py
 
 ---
 
-## 🤝 Connect With Us
+## 🤝 Connect With Me
 
-| | Harvi Gothi | Pari Patel |
+| GitHub | LinkedIn | LeetCode |
 |---|---|---|
-| GitHub | [@Harvi41](https://github.com/Harvi41) | [@Pari658](https://github.com/Pari658) |
-| LinkedIn | [Harvi Gothi](https://www.linkedin.com/in/harvi-gothi-8985a3320) | [Pari Patel](https://www.linkedin.com/in/pari-patel-ab57ab321) |
+| [@Harvi41](https://github.com/Harvi41) | [Harvi Gothi](https://www.linkedin.com/in/harvi-gothi-8985a3320) | [Harvi_Gothi](https://leetcode.com/u/Harvi_Gothi/) |
 
 ---
 
 <p align="center">
-  Made with ❤️ by Harvi Gothi & Pari Patel · BVM Engineering College · 2024–2028
+  Made with ❤️ by Harvi Gothi · BVM Engineering College · 2024–2028
 </p>
